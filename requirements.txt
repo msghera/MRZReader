@@ -1,0 +1,4 @@
+opencv-contrib-python==4.2.0.32
+opencv-python==3.4.2.17
+python-dotenv==0.10.5
+pytesseract==0.2.5
