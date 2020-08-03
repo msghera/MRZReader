@@ -8,9 +8,9 @@ from pytesseract import image_to_string
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger("BarcodeReader")
+log = logging.getLogger("MRZReader")
 
-class BarcodeReader:
+class MRZReader:
 
     def __init__(self, **kwargs):
         try :
@@ -31,7 +31,7 @@ class BarcodeReader:
         self.__extractor()
 
         cv2.imwrite('test.jpg', self.image) 
-        log.info('Barcode read completed successfully.\n\n') 
+        log.info('MRZ read completed successfully.\n\n') 
 
     def __resizer(self):
         

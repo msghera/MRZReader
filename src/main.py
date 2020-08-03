@@ -1,4 +1,4 @@
-from BarcodeReader import BarcodeReader
+from MRZReader import MRZReader
 from MRZParser import MRZParser
 import argparse
 
@@ -14,7 +14,7 @@ def process_arg():
 
 
 def main():
-    barcode_reader = BarcodeReader(ImagePath = PATH)
+    barcode_reader = MRZReader(ImagePath = PATH)
     print(MRZParser(barcode_reader.get_text()))
 
 
