@@ -5,6 +5,9 @@ import argparse
 PATH = '../images/test2.jpg'
 
 def process_arg():
+
+    global PATH
+
     parser = argparse.ArgumentParser()
     parser.add_argument("filepath", help="Provide imagepath to process",
                         type=str)

@@ -30,7 +30,6 @@ class MRZReader:
         self.__thereseholder()
         self.__extractor()
 
-        cv2.imwrite('test.jpg', self.image) 
         log.info('MRZ read completed successfully.\n\n') 
 
     def __resizer(self):

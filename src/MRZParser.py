@@ -32,7 +32,7 @@ class MRZParser():
         )
 
 
-        if len(line) < 3:
+        if len(line) < 3 or len(line[0]) != 1:
             if len(line[0]) > 2:
                 line.insert(1, line[0][2:])
                 line[0] = line[0][0]
@@ -41,7 +41,7 @@ class MRZParser():
                 line.insert(2, line[1][13:])
                 line[1] = line[1][:12]
 
-            else :
+            if len(line) < 3 or len(line[0]) != 1:
                 raise ValueError('Less sections in line 1 then expected.')
         
         # print(line)
